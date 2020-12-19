@@ -7,11 +7,13 @@ import android.database.sqlite.SQLiteStatement;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.medialo.gsba.core.Fee;
 import fr.medialo.gsba.core.FeeFile;
+import fr.medialo.gsba.core.FeeLine;
 import fr.medialo.gsba.core.database.DataBaseAccessHelper;
 
 public class FeeFile_DAO extends Dao<FeeFile> {
-
+    private static final String DELETE = "DELETE FROM files WHERE id = ?";
 
     @Override
     public void create(FeeFile objToCreate) {
@@ -47,7 +49,9 @@ public class FeeFile_DAO extends Dao<FeeFile> {
 
     @Override
     public void delete(FeeFile objToDelete) {
-
+        SQLiteStatement statement = database.compileStatement(DELETE);
+        statement.bindLong(1,objToDelete.getId());
+        statement.execute();
     }
 
     public void updateDate(int id){

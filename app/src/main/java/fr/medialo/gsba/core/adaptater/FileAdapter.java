@@ -22,6 +22,14 @@ public class FileAdapter extends RecyclerView.Adapter<FileAdapter.ViewHolder> {
     private List<FeeFile> mFeeFiles;
     private AdapterView.OnItemClickListener listener;
 
+    public List<FeeFile> getmFeeFiles() {
+        return mFeeFiles;
+    }
+
+    public void setmFeeFiles(List<FeeFile> mFeeFiles) {
+        this.mFeeFiles = mFeeFiles;
+    }
+
     public FeeFile getSelectedFeeFile() {
         return selectedFeeFile;
     }

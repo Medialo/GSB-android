@@ -14,6 +14,7 @@ public interface Daoi<T> {
 
     List<T> getAll();
 
+
     T get(int id);
 
     void update(T objToSave);

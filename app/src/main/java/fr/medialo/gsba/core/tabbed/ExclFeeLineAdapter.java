@@ -26,13 +26,23 @@ public class ExclFeeLineAdapter extends RecyclerView.Adapter<FeeLineAdapter.View
         return selectedFeeLine;
     }
 
-
+    public List<Fee> getmFeeLineList() {
+        return mFeeLineList;
+    }
 
     // Pass in the contact array into the constructor
     public ExclFeeLineAdapter(List<Fee> feeLineList, AdapterView.OnItemClickListener listener) {
         mFeeLineList = feeLineList;
         this.listener = listener;
+
+
+
     }
+
+
+
+
+
 
 
 
@@ -102,9 +112,11 @@ public class ExclFeeLineAdapter extends RecyclerView.Adapter<FeeLineAdapter.View
         public TextView getPrice() {
             return price;
         }
+
+
     }
 
-
-
-
+    public void setmFeeLineList(List<Fee> mFeeLineList) {
+        this.mFeeLineList = mFeeLineList;
+    }
 }

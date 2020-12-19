@@ -9,7 +9,7 @@ import fr.medialo.gsba.core.category.SubCategory;
 public class SubCategoryManager {
 
 
-    public static Map<Integer, SubCategory> map = new HashMap<>();
+    public static Map<Integer, SubCategory> map;
 
     public static void init(){
         synchronized (SubCategoryManager.class){

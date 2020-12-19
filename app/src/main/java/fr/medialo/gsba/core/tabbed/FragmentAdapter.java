@@ -11,6 +11,16 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 public class FragmentAdapter extends FragmentPagerAdapter {
 
     private int fileId;
+    private EditFragmentExclFeeLine editFragmentExclFeeLine;
+    private EditFragmentFeeLine editFragmentFeeLine;
+
+    public EditFragmentExclFeeLine getEditFragmentExclFeeLine() {
+        return editFragmentExclFeeLine;
+    }
+
+    public EditFragmentFeeLine getEditFragmentFeeLine() {
+        return editFragmentFeeLine;
+    }
 
     public FragmentAdapter(@NonNull FragmentManager fm) {
         super(fm);
@@ -27,11 +37,11 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         bundle.putInt("id",fileId);
         switch (position){
             case 0:
-                EditFragmentFeeLine editFragmentFeeLine = new EditFragmentFeeLine();
+                 editFragmentFeeLine = new EditFragmentFeeLine();
                 editFragmentFeeLine.setArguments(bundle);
                 return editFragmentFeeLine;
             case 1:
-                EditFragmentExclFeeLine editFragmentExclFeeLine = new EditFragmentExclFeeLine();
+                editFragmentExclFeeLine = new EditFragmentExclFeeLine();
                 editFragmentExclFeeLine.setArguments(bundle);
                 return editFragmentExclFeeLine;
             default:

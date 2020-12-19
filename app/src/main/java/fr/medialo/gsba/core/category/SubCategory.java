@@ -1,5 +1,7 @@
 package fr.medialo.gsba.core.category;
 
+import androidx.annotation.NonNull;
+
 public class SubCategory {
 
     private int id;
@@ -50,5 +52,11 @@ public class SubCategory {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return this.name;
     }
 }

@@ -17,38 +17,65 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/spinnerTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categorie :" />
 
+        <Spinner
+            android:id="@+id/spinnerSubCat"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/labelTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Label :"/>
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/ediTextLabelExclFee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
+            android:id="@+id/textviewQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantité :" />
+
+        <EditText
+            android:id="@+id/editTextQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textviewCost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Prix :" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/editTextCostExclFee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberDecimal" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/tvfab1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Date :" />
 
         <DatePicker
-            android:id="@+id/edit_fee_lie_date_picker"
+            android:id="@+id/datePickerDateExclFee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:calendarViewShown="false"
@@ -57,15 +84,16 @@
             android:inputType="date" />
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/switchExclFee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Validé :" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonEditFeeLineExcl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enregistrer" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

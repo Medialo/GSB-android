@@ -17,6 +17,15 @@ public class Fee implements ExclFee {
     protected double cost;
     protected LocalDate date;
 
+    public Fee(){
+        this.id = -1;
+        this.file_id = -1;
+        this.statu_id = 1;
+        this.name = "";
+        this.cost = 0.0;
+        this.date = LocalDate.now();
+    }
+
     public Fee(int id, int file_id, int statu_id, String name, double cost, String date) {
         this.id = id;
         this.file_id = file_id;
@@ -78,8 +87,12 @@ public class Fee implements ExclFee {
         return this.getCost() + " €";
     }
 
-    private LocalDate setDateWithString(String time){
+    public LocalDate setDateWithString(String time){
         return LocalDate.parse(time);
+    }
+
+    public boolean getStatu_idBool(){
+        return this.statu_id != 1;
     }
 
 }

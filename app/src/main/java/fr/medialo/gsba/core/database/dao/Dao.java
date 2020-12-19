@@ -39,6 +39,17 @@ public abstract class Dao<T> implements Daoi<T>{
     }
 
 
+    protected T cursorTo(Cursor c,Supplier<T> s) {
+        c.moveToFirst();
+        if (c.getCount() == 0)
+            return null;
+        T t = s.get();
+        c.close();
+        return t;
+    }
+
+
+
 
 
 
